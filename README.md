@@ -12,9 +12,9 @@
 
 **Ecoleta** é uma aplicação responsável por um marketplace que cadastra locais que coletam resíduos e depois permite que os mesmos sejam localizados em um mapa.
 
-O cadastro dos locais são feitos através de uma interface web. No cadastro o usuário deve fornecer uma imagem do local (recurso 'drag and drop' disponível); dados do local como nome, e-mail, whatsapp, cidade e estado (informações adquiridas através da própria API do IBGE), o endereço exato (indicado através de um marcador no mapa), e os tipos de coleta disponveis.
+O cadastro dos locais são feitos através de uma interface web. No cadastro o usuário deve fornecer uma imagem do local (recurso 'drag and drop' disponível); dados do local como nome, e-mail, whatsapp, cidade e estado (informações adquiridas através da própria API do IBGE), o endereço exato (indicado através de um marcador no mapa), e os tipos de coleta disponíveis.
 
-No aplicativo móvel é possvel que o usuário localize todos os locais disponíveis na sua região, filtrados de acordo com a categoria de coleta desejada, e obter as informações do local - além de conseguir mandar um e-mail ou mensagem de whatsapp diretamente.
+No aplicativo móvel é possível que o usuário localize todos os locais disponíveis na sua região, filtrados de acordo com a categoria de coleta desejada, e obter as informações do local - além de conseguir mandar um e-mail ou mensagem de whatsapp diretamente.
 
 ## Tecnologias
 
