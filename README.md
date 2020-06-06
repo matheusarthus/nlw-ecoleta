@@ -6,15 +6,15 @@
   Desafio Next Level Week: Ecoleta 
 </h3>
 
-<p>Aplicação completa (back-end, web e mobile) de um marketplace de locais de coleta de resíduos chamdo Ecoleta, codado durante a primeira edição da Next Level Week da Rocketseat.</p>
+<p>Aplicação completa (back-end, web e mobile) de um marketplace de locais de coleta de resíduos chamado Ecoleta, codado durante a primeira edição da Next Level Week da Rocketseat.</p>
 
 ## Sobre o desafio
 
-**Ecoleta** é uma aplicação de logística, feito com o intuíto de auxiliar no gerenciamento e no controle das entregas de encomendas.
+**Ecoleta** é uma aplicação responsável por um marketplace que cadastra locais que coletam resíduos e depois permite que os mesmos sejam localizados em um mapa.
 
-Esse auxílio é feito através de ferramentas que permitem, ao administrador, o cadastro de entregadores, destinatários e encomendas; a associação destas encomendas aos entregadores que, por sua vez, administram suas entregas através do aplicativo mobile; e o gerenciamento dos problemas ocorridos nas entregas possibilitando, eventualmente, o cancelamento das mesmas.
+O cadastro dos locais são feitos através de uma interface web. No cadastro o usuário deve fornecer uma imagem do local (recurso 'drag and drop' disponível); dados do local como nome, e-mail, whatsapp, cidade e estado (informações adquiridas através da própria API do IBGE), o endereço exato (indicado através de um marcador no mapa), e os tipos de coleta disponveis.
 
-No aplicativo mobile, o entregador tem acesso às encomendas atribudas a ele (pendentes e já concluídas); tem os recursos de confirmação de retirada de encomenda e de entrega conclúida (atestada por uma foto da assinatura do destinatário); e, também, a possibilidade de cadastrar um problema com uma entrega especfica e visualizar o histórico de problemas atribuídos.
+No aplicativo móvel é possvel que o usuário localize todos os locais disponíveis na sua região, filtrados de acordo com a categoria de coleta desejada, e obter as informações do local - além de conseguir mandar um e-mail ou mensagem de whatsapp diretamente.
 
 ## Tecnologias
 
@@ -27,9 +27,13 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## Resultado:
 
+**MOBILE**
+
 <p align="center">
-  <img src=".github/app.gif" height="400">
+  <img src=".github/app.gif" height="500">
 </p>
+
+**WEB**
 
 <p align="center">
   <img alt="ecoleta_web_1" title="Ecoleta_web1" src=".github/ecoleta_screen1.png" width="100%" />
@@ -38,27 +42,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## Back-end
 
-Para executar o back-end é preciso acessar, via terminal, a pasta `backend` e seguir os seguintes passos:
-
-**1.** Criar containers de Postgres e Redis no Docker, com o comando:
-
-`docker run --name db_fastfeet -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres`
-
-e
-
-`docker run --name redisfastfeet -p 6380:6379 -d -t redis:alpine`
-
-**2.** Iniciar bancos de dados no Docker, com o comando: 
-
-`docker start db_fastfeet redisfastfeet`
-
-**3.** Gerar as tabelas no banco de dados, através das migrations e seeds do Sequelize, com os comandos:
-
-`yarn sequelize db:migrate` e `yarn sequelize db:seed:all`
-
-**4.** Configurar o MailTrap no arquivo `web/src/config/mail.js` com o `user` e `pass` da sua conta.
-
-**5.** Finalmente, executar o comando `yarn dev` para rodar a api.
+Para executar o back-end é preciso acessar, via terminal, a pasta `backend` e executar o comando `yarn dev` para rodar a API.
 
 ## Web
 
@@ -74,7 +58,7 @@ Para executar a aplicação Mobile você deve acessar, via terminal, a pasta `mo
 
 **Obs2:** Se a aplicação não estiver conseguindo acessar a api, faça o remapeamento de porta com o comando: `adb reverse tcp:3334 tcp:3334`.
 
-**2.** Agora rode o Metro Bundler com o comando `yarn start`.
+**2.** Agora rode a aplicação com o comando `yarn start`;
 
-**3.** Em outra aba do terminal, instale a aplicação com o comando `react-native run-android`.
+**3.** Instalar o aplicativo Expo no celular e escanear o QR-CODE disponível na tela do navegador.
 
